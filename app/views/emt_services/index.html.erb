@@ -1,0 +1,32 @@
+<h1>Listing emt_services</h1>
+<%= link_to 'New Emt service', new_emt_service_path %>
+Count = <%= @emt_services.length %><br/>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Address</th>
+      <th>Phone</th>
+      <th>Imgageurl</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @emt_services.each do |emt_service| %>
+      <tr>
+        <td><%= emt_service.name %></td>
+        <td><%= emt_service.address %></td>
+        <td><%= emt_service.phone %></td>
+        <td><%= emt_service.imgageUrl %></td>
+        <td><%= link_to 'Show', emt_service %></td>
+        <td><%= link_to 'Edit', edit_emt_service_path(emt_service) %></td>
+        <td><%= link_to 'Destroy', emt_service, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Emt service', new_emt_service_path %>

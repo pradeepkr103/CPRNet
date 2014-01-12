@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @emt_service.name %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @emt_service.address %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @emt_service.phone %>
+</p>
+
+<p>
+  <strong>Imgageurl:</strong>
+  <%= @emt_service.imgageUrl %>
+</p>
+
+<%= link_to 'Edit', edit_emt_service_path(@emt_service) %> |
+<%= link_to 'Back', emt_services_path %>
